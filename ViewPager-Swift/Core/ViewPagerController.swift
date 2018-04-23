@@ -178,7 +178,7 @@ public class ViewPagerController:UIViewController {
             
             self.tabsViewList[previousIndex].removeHighlight(options: self.options)
             
-            UIView.animate(withDuration: 0.8, animations: {
+            UIView.animate(withDuration: 0.4, animations: {
                 
                 self.tabsViewList[currentIndex].addHighlight(options: self.options)
             })
@@ -210,7 +210,7 @@ public class ViewPagerController:UIViewController {
             
             self.tabContainer.bringSubview(toFront: tabIndicator)
             
-            UIView.animate(withDuration: 0.5, animations: {
+            UIView.animate(withDuration: 0.2, animations: {
                 
                 self.tabContainer.scrollRectToVisible(tabIndicatorFrame, animated: false)
                 self.tabIndicator.frame = tabIndicatorFrame
@@ -221,7 +221,7 @@ public class ViewPagerController:UIViewController {
         }
         
         // Just animate the scrolling if indicator is not available
-        UIView.animate(withDuration: 0.5) { 
+        UIView.animate(withDuration: 0.2) { 
             
             self.tabContainer.scrollRectToVisible(currentTabFrame, animated: false)
         }
